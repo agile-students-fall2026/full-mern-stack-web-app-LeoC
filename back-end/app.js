@@ -22,6 +22,17 @@ mongoose
 const { Message } = require('./models/Message')
 const { User } = require('./models/User')
 
+app.get('/about',(req,res) =>{
+  res.json({
+    title: 'About Us',
+    paragraphs:[
+      'Hi! My name is Shuhang Chen. I am currently a student at NYU studying Game Design with a minor in Computer Science.',
+      'I am interested in game development, software engineering, and technical design.',
+      'Outside of school, I enjoy playing games, building projects, and learning new technologies.',
+    ],
+    image: 'https://media.licdn.com/dms/image/v2/D4D03AQEJ2O4OT-FS0w/profile-displayphoto-shrink_800_800/B4DZWvdaycHIAc-/0/1742405483903?e=1792627200&v=beta&t=50N4pStPaievkOktC4lfjn_bnvhQd7f1ng-TED-kxsg'
+  })
+})
 // a route to handle fetching all messages
 app.get('/messages', async (req, res) => {
   // load all messages from database
