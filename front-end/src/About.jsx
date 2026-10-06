@@ -13,7 +13,7 @@ function About(){
     }
     return(
         <div>
-            <h1>(aboutData.title)</h1>
+            <h1>{aboutData.title}</h1>
             {aboutData.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
                  ))}
